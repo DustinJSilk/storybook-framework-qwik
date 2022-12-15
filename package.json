@@ -1,0 +1,76 @@
+{
+  "name": "storybook-framework-qwik",
+  "version": "0.0.1",
+  "description": "Storybook for Qwik or Qwik City",
+  "keywords": [
+    "Storybook",
+    "Qwik City",
+    "Qwik"
+  ],
+  "homepage": "https://github.com/DustinJSilk/storybook-framework-qwik",
+  "bugs": {
+    "url": "https://github.com/DustinJSilk/storybook-framework-qwik/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DustinJSilk/storybook-framework-qwik.git",
+    "directory": "/"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./preset": {
+      "require": "./dist/preset.js",
+      "import": "./dist/preset.mjs",
+      "types": "./dist/preset.d.ts"
+    },
+    "./preview.js": {
+      "require": "./dist/preview.js",
+      "import": "./dist/preview.mjs",
+      "types": "./dist/preview.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "types/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "..."
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "7.0.0-beta.8",
+    "@storybook/addon-essentials": "^7.0.0-beta.8",
+    "@storybook/builder-vite": "7.0.0-beta.8",
+    "@storybook/core-common": "7.0.0-beta.8",
+    "@storybook/html": "7.0.0-beta.8",
+    "@storybook/node-logger": "7.0.0-beta.8"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "0.15.2",
+    "@builder.io/qwik-city": "0.0.128",
+    "@types/node": "^16.0.0",
+    "typescript": "^4.9.4",
+    "vite-tsconfig-paths": "4.0.2"
+  },
+  "peerDependencies": {
+    "@babel/core": "^x.x.x"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
